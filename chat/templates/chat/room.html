@@ -1,0 +1,29 @@
+{% extends 'index.html' %} {% load static %} {% block content %}
+<div class="container mt-3 p-1">
+    <input type="hidden" id="username" value="{{username}}" disabled>
+    <div class="info display-none">
+        <div class="spinner-border spinner-border-sm text-secondary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <!-- <div class="spinner-grow spinner-grow-sm text-secondary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div> -->
+        <div class="msg px-1">Waiting for random user to join</div>
+    </div>
+    <div class="display"></div>
+    <hr>
+    <!-- <h3 class="h2 text-center">Join or create room</h3>s -->
+    <form id="form">
+        <div class="mb-3">
+            <textarea type="text" id="textarea" class="form-control" name="roomname" placeholder="Enter Your Message" id="message"></textarea>
+            <div class="d-grid gap-1 mt-1">
+                <input type="submit" class="btn btn-success block" id="send" value="Send Message">
+                <input class="btn btn-success" id="next" value="Next">
+            </div>
+        </div>
+    </form>
+</div>
+<script src="{% static 'scripts/room.js' %}"></script>
+<script src="{% static 'scripts/autoscroll.js' %}"></script>
+
+{% endblock content %}

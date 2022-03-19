@@ -1,0 +1,54 @@
+    body {
+        overflow-y: hidden;
+    }
+    
+    .container {
+        background-color: rgb(248, 249, 250);
+        opacity: 1;
+        border-radius: 10px;
+    }
+    
+    .display {
+        width: 100%;
+        padding: 20px;
+        height: 60vh;
+        position: relative;
+        overflow-y: scroll;
+    }
+    
+    .toast {
+        width: 100%;
+    }
+    
+    .info {
+        display: flex;
+        align-items: center;
+    }
+    
+    .display-none {
+        display: none;
+    }
+    
+    .activeUsers-container {
+        display: flex;
+    }
+    
+    .activeUsers-container>* {
+        line-height: 15px;
+        margin-left: 2px;
+    }
+    
+    .blip {
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    #form input.btn {
+        display: none;
+    }
+    
+    .block {
+        display: block !important;
+    }
