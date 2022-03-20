@@ -6,9 +6,9 @@ const roomname = document.getElementById('roomname').value;
 const is_host = document.getElementById('createdOrJoin').value;
 const form = document.getElementById('form');
 
-let url = `ws://${window.location.host}/ws/privateRoomConsumer/${username}/${roomname}/False/`
+let url = `wss://${window.location.host}/ws/privateRoomConsumer/${username}/${roomname}/False/`
 if (is_host == 'True') {
-    url = `ws://${window.location.host}/ws/privateRoomConsumer/${username}/${roomname}/True/`
+    url = `wss://${window.location.host}/ws/privateRoomConsumer/${username}/${roomname}/True/`
 }
 
 const Socket = new WebSocket(url)

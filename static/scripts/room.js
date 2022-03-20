@@ -1,5 +1,5 @@
 const username = document.getElementById('username').value;
-const url = `ws://${window.location.host}/ws/consumer/${username}/`;
+const url = `wss://${window.location.host}/ws/consumer/${username}/`;
 let Socket = new WebSocket(url);
 const form = document.querySelector('#form');
 const display = document.querySelector('.display');
