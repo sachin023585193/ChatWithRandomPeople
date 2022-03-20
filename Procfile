@@ -1,0 +1,1 @@
+web: gunicorn chatWithRandomPeople.wsgi --log-file -
