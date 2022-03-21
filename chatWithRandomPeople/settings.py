@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-2zzd9#mo@j9aihv*^u-_-^lgb=$mh%fmb7g!pf1y7hy82o8l51'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['chatwithrandompeople.herokuapp.com','127.0.0.1']
 
@@ -55,12 +55,20 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CHANNEL_LAYERS = {
-    'default':{
-        'BACKEND':'channels.layers.InMemoryChannelLayer',
-    }
-}
+# CHANNEL_LAYERS = {
+#     'default':{
+#         'BACKEND':'channels.layers.InMemoryChannelLayer',
+#     }
+# }
 
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [os.environ.get('REDIS_URL','redis://localhost:6379')],
+        },
+    },
+}
 
 ROOT_URLCONF = 'chatWithRandomPeople.urls'
 
