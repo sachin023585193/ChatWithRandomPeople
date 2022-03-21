@@ -1,1 +1,1 @@
-web: daphne chatWithRandomPeople.asgi:application --port $PORT --bind 0.0.0.0 -v2
+daphne -p 8001 myproject.asgi:application
