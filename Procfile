@@ -1,1 +1,1 @@
-daphne -p 8001 chatWithRandomPeople.asgi:application
+web: gunicorn chatWithRandomPeople.wsgi --log-file -
