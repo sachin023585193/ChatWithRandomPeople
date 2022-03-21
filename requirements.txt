@@ -5,7 +5,7 @@ Automat==20.2.0
 cffi==1.15.0
 channels==3.0.4
 constantly==15.1.0
-channels-redis==2.4.2
+channels-redis==3.4.0
 cryptography==36.0.2
 daphne==3.0.2
 Django==4.0.3
@@ -13,7 +13,7 @@ gunicorn==20.1.0
 hyperlink==21.0.0
 idna==3.3
 incremental==21.3.0
-msgpack==0.6.0
+msgpack==1.0.3
 psycopg2==2.9.3
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
